@@ -20,6 +20,11 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      - name: Create Android project
+        run: |
+          chmod +x setup-sphere360-project.sh
+          ./setup-sphere360-project.sh
+
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
 
